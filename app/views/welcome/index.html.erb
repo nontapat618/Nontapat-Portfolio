@@ -1,0 +1,642 @@
+
+
+
+
+
+    <%= stylesheet_link_tag    'scroll-animation' %>
+    <script type="text/javascript"> 
+        function init_map(){
+        var myOptions = {zoom:16,center:new google.maps.LatLng(13.7594487,100.56349950000003),mapTypeId: google.maps.MapTypeId.ROADMAP};
+        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+        marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(13.7594487,100.56349950000003)});
+        infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>meechai bangkok<br>'});
+        google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
+        infowindow.open(map,marker);
+      }
+    
+      
+      $(document).ready(function(){
+        $('#portfolioModal2').on('shown.bs.modal', function () {
+          google.maps.event.trigger(map, "resize");
+        });
+        init_map();
+        google.maps.event.addDomListener(window, 'load', init_map);
+        
+	    $(window).scroll(function() {        
+    		$('#nsc').each(function(){
+    		var imagePos = $(this).offset().top;
+    
+    		var topOfWindow = $(window).scrollTop();
+    			if (imagePos < topOfWindow+600) {
+    				$(this).addClass("fadeIn");
+    			}
+    		});
+    		
+    		$('#acm').each(function(){
+    		var imagePos = $(this).offset().top;
+    
+    		var topOfWindow = $(window).scrollTop();
+    			if (imagePos < topOfWindow+600) {
+    				$(this).addClass("fadeIn");
+    			}
+    		});
+    		
+    		$('#java').each(function(){
+    		var imagePos = $(this).offset().top;
+    
+    		var topOfWindow = $(window).scrollTop();
+    			if (imagePos < topOfWindow+600) {
+    				$(this).addClass("expandOpen");
+    			}
+    		});
+    		
+    		$('#spring').each(function(){
+    		var imagePos = $(this).offset().top;
+    
+    		var topOfWindow = $(window).scrollTop();
+    			if (imagePos < topOfWindow+600) {
+    				$(this).addClass("expandOpen");
+    			}
+    		});
+    		
+    		$('#hibernate').each(function(){
+    		var imagePos = $(this).offset().top;
+    
+    		var topOfWindow = $(window).scrollTop();
+    			if (imagePos < topOfWindow+600) {
+    				$(this).addClass("expandOpen");
+    			}
+    		});
+    		
+    		$('#ruby').each(function(){
+    		var imagePos = $(this).offset().top;
+    
+    		var topOfWindow = $(window).scrollTop();
+    			if (imagePos < topOfWindow+600) {
+    				$(this).addClass("expandOpen");
+    			}
+    		});  
+
+    		$('#javascript').each(function(){
+    		var imagePos = $(this).offset().top;
+    
+    		var topOfWindow = $(window).scrollTop();
+    			if (imagePos < topOfWindow+600) {
+    				$(this).addClass("expandOpen");
+    			}
+    		});
+    		$('#jquery').each(function(){
+    		var imagePos = $(this).offset().top;
+    
+    		var topOfWindow = $(window).scrollTop();
+    			if (imagePos < topOfWindow+600) {
+    				$(this).addClass("expandOpen");
+    			}
+    		});
+    		$('#websphere').each(function(){
+    		var imagePos = $(this).offset().top;
+    
+    		var topOfWindow = $(window).scrollTop();
+    			if (imagePos < topOfWindow+600) {
+    				$(this).addClass("expandOpen");
+    			}
+    		});
+    		$('#dbvis').each(function(){
+    		var imagePos = $(this).offset().top;
+    
+    		var topOfWindow = $(window).scrollTop();
+    			if (imagePos < topOfWindow+600) {
+    				$(this).addClass("expandOpen");
+    			}
+    		});
+    		$('#svn').each(function(){
+    		var imagePos = $(this).offset().top;
+    
+    		var topOfWindow = $(window).scrollTop();
+    			if (imagePos < topOfWindow+600) {
+    				$(this).addClass("expandOpen");
+    			}
+    		});
+    		$('#git').each(function(){
+    		var imagePos = $(this).offset().top;
+    
+    		var topOfWindow = $(window).scrollTop();
+    			if (imagePos < topOfWindow+600) {
+    				$(this).addClass("expandOpen");
+    			}
+    		});    		
+    		
+	    });
+        
+      });
+      
+    
+    </script>   
+    <!-- Bootstrap Core CSS -->
+   <%= stylesheet_link_tag    'bootstrap' %>
+
+
+    <!-- Custom Fonts -->
+   <%= stylesheet_link_tag    'font-awesome' %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+   <%= stylesheet_link_tag    'agency' %>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Portfolio</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#accomplishment">Accomplishment</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#skill">Skill</a>
+                    </li>                    
+                    <li>
+                        <a class="page-scroll" href="#working">Working</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-heading">Welcome To Portfolio</div>
+				<div class="intro-lead-in">You can call me cartoon.</div>
+				<div class="intro-lead-in">this site is built by boostrap template</div>
+                <a href="#portfolio" class="page-scroll btn btn-xl">Let me introduce my self</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- About Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading" style="color: #C0392B;">About Me</h2>
+                </div>
+                <div class="col-lg-12" style="height: 40px;"></div>                
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+
+                        </div>
+                        <%= image_tag("graduation.jpg", :alt => "rss feed",:class => "img-responsive") %>                        
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4 style="color: #C0392B;">Graduation</h4>
+                        <p class="text-muted">Transcript and TOEIC score</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+
+                            </div>
+                        </div>
+                        <%= image_tag("home.jpg", :alt => "rss feed",:class => "img-responsive") %>   
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4 style="color: #C0392B;">Resident</h4>
+                        <p class="text-muted">Native Chiang Mai but live in Bangkok</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+
+                            </div>
+                        </div>
+                        <%= image_tag("party.jpg", :alt => "rss feed",:class => "img-responsive",:style => "height: 240px;") %>   
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4 style="color: #C0392B;">Hobby</h4>
+                        <p class="text-muted">I love drinking beer ,My life belongs to it</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="accomplishment">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading" style="color: #C0392B;">Accomplishment</h2>
+                </div>
+                <div class="col-lg-12" style="height: 40px;"></div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x" id="nsc">
+                        <i class="fa fa-circle fa-stack-2x text-my-primary"></i>
+                        <i class="fa fa-wheelchair fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading" style="color: #C0392B;">National Software Contest</h4>
+                    <p class="text-muted">As participant in final round of National Software Contest 2015 in Defected and elder person topic.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x" id="acm">
+                        <i class="fa fa-circle fa-stack-2x text-my-primary"></i>
+                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading" style="color: #C0392B;">ACM-ICPC</h4>
+                    <p class="text-muted">Complimentary Award in ACM-ICPC Thailand Northern Region programming contest 2014.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Services Section -->
+    <section id="skill">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading" style="color: #C0392B;">Skill</h2>
+                </div>
+                <div class="col-lg-12" style="height: 40px;"></div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x" id="java">
+                        <i class="fa fa-circle fa-stack-2x text-my-primary"></i>
+                        <i class="fa fa-coffee fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading" style="color: #C0392B;">Java</h4>
+                    <p class="text-muted">As my proficient programming language</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x" id="spring">
+                        <i class="fa fa-circle fa-stack-2x text-my-primary"></i>
+                        <i class="fa fa-leaf fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading" style="color: #C0392B;">Spring</h4>
+                    <p class="text-muted">DI Framework</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x" id="hibernate">
+                        <i class="fa fa-circle fa-stack-2x text-my-primary"></i>
+                        <i class="fa fa-database fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading" style="color: #C0392B;">Hibernate</h4>
+                    <p class="text-muted">ORM Framework</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x" id="ruby">
+                        <i class="fa fa-circle fa-stack-2x text-my-primary"></i>
+                        <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading" style="color: #C0392B;">Ruby</h4>
+                    <p class="text-muted">Still Rookie of it</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x" id="javascript">
+                        <i class="fa fa-circle fa-stack-2x text-my-primary"></i>
+                        <i class="fa fa-stack-1x fa-inverse">Js</i>
+                    </span>
+                    <h4 class="service-heading" style="color: #C0392B;">JavaScript</h4>
+                    <p class="text-muted">Common skill of full-stack developer</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x" id="jquery">
+                        <i class="fa fa-circle fa-stack-2x text-my-primary"></i>
+                        <i class="fa fa-stack-1x fa-inverse">Jq</i>
+                    </span>
+                    <h4 class="service-heading" style="color: #C0392B;">Jquerry</h4>
+                    <p class="text-muted">Common skill of full-stack developer</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x" id="websphere">
+                        <i class="fa fa-circle fa-stack-2x text-my-primary"></i>
+                        <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading" style="color: #C0392B;">Websphere</h4>
+                    <p class="text-muted">Web server apache for deploying web-application</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x" id="dbvis">
+                        <i class="fa fa-circle fa-stack-2x text-my-primary"></i>
+                        <i class="fa fa-database fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading" style="color: #C0392B;">DB visualizer</h4>
+                    <p class="text-muted">Db tools</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x" id="svn">
+                        <i class="fa fa-circle fa-stack-2x text-my-primary"></i>
+                        <i class="fa fa-stack-1x fa-inverse">svn</i>
+                    </span>
+                    <h4 class="service-heading" style="color: #C0392B;">SVN</h4>
+                    <p class="text-muted">Well-known control-version</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x" id="git">
+                        <i class="fa fa-circle fa-stack-2x text-my-primary"></i>
+                        <i class="fa fa-git fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading" style="color: #C0392B;">Git</h4>
+                    <p class="text-muted">Newly control-version</p>
+                </div>                
+            </div>
+        </div>
+    </section>    
+
+
+    <!-- Working Section -->
+    <section id="working">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading" style="color: #C0392B;">Working</h2>
+                    <h3 class="section-subheading text-muted">the following timeline is my recently working site As Full-stack developer</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <%= image_tag("csi.JPG", :alt => "rss feed",:class => "img-circle img-responsive") %> 
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 style="color: #C0392B;">April 2014 - July 2014</h4>
+                                    <h4 class="subheading" style="color: #C0392B;">Internship</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">As intern i worked as php developer for internal module without any framework</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <%= image_tag("gsb.png", :alt => "rss feed",:class => "img-circle img-responsive") %> 
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 style="color: #C0392B;">September 2015 - March 2016</h4>
+                                    <h4 class="subheading" style="color: #C0392B;">Government Saving Bank</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Loan Originated System is the one that my team is responsible for Government Saving Bank.My duties is creating dynamic filling form page  and generating loan's document for user</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <%= image_tag("ktb.png", :alt => "rss feed",:class => "img-circle img-responsive") %>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 style="color: #C0392B;">March 2016 - Now</h4>
+                                    <h4 class="subheading" style="color: #C0392B;">Krung Thai Bank</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">I handle a tasks that System analysis assigne to me . The task is a defected from web application projects and webservice project</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contact Me</h2>
+                </div>
+                <div class="col-lg-12 text-center" style="height:30px;"></div>
+                <%= render'shared/errors',obj: @message  %>    
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <%= form_for(@message ,:name => "sentMessage",  :html => {class: "form-horizontal", role: "form"}) do |f| %>
+                     
+                    <div class="row">
+                        <div class="col-md-12">
+                            <%= render 'layouts/messages' %>                                                
+                            <div class = 'col-sm-12'>                                
+                                <div class = 'form-group'>
+                                    <%=  f.text_field:name,class: "form-control transparent-input",placeholder: "Your Name" %>
+                                </div>
+                            </div>
+                            <div class = 'col-sm-12'>                                
+                                <div class = 'form-group'>
+                                    <%=  f.text_field:company,class: "form-control transparent-input",placeholder: "Your Company" %>
+                                </div>
+                            </div>
+                            <div class = 'col-sm-12'>                                
+                                <div class = 'form-group'>
+                                    <%= f.text_area:message, rows: 15,class: "form-control transparent-textarea",placeholder: "Your Message" %>
+                                </div>
+                            </div>
+                            <div class = 'col-md-12' style="height: 50px;"></div>
+                            <div class="clearfix"></div>                            
+                            <div class = 'form-group'>
+                                <div class = 'col-sm-12 text-center'>
+                                    <div id="success"></div>                                    
+                                    <%= f.submit "Leave a meassage" ,class: 'btn btn-xl' %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% end %>                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Nontapat Website 2016</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="https://www.facebook.com/nontapat.nattapol" target="_blank"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/nontapat-kantekul-857aa3102?trk=nav_responsive_tab_profile" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>          
+        <div class="modal-body" align="center">
+           <!-- Project Details Go Here -->
+            <h3 align="center" class="text-my-primary">Graduation</h3>      
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#transcript" class="text-my-primary">Transcript</a></li>
+                <li><a data-toggle="tab" href="#toeic" class="text-my-primary">Toeic</a></li>
+            </ul>      
+          <div class="tab-content">
+            <div id="transcript" class="tab-pane fade in active">
+                <%= image_tag("resume.jpg", :alt => "rss feed",:class => "resume-size") %>
+                <p><strong>I graduate with  bachelor of computer engineering at Chiang Mai University (2011-2015)</strong></p>                               
+            </div>
+            <div id="toeic" class="tab-pane fade">
+                <%= image_tag("toeic.PNG", :alt => "rss feed",:class => "resume-size") %>
+                <p><strong>I have studied by myself for 2 weeks</strong></p>                                 
+            </div>
+          </div>                    
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+        </div>
+      </div>
+    </div>  
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>          
+        <div class="modal-header">
+          <h3 align="center" class="text-my-primary">Resident</h3>
+        </div>
+        <div class="modal-body" align="center">
+            <div style='overflow:hidden;height:350px;width:350px;'>
+              <div id='gmap_canvas' style='height:350px;width:350px;'></div>
+              <div><small><a href="http://embedgooglemaps.com">embed google maps</a></small></div>
+              <div><small><a href="https://privacypolicygenerator.info">privacy policy example</a></small></div>
+              <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+            </div>
+            <div class="col-xs-12" style="height: 30px;"></div>
+            <p><strong>The showing pinned position is my currently resident</strong></p>                 
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+        </div>
+      </div>
+      
+    </div>
+    </div>
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>          
+        <div class="modal-header">
+          <h3 align="center" class="text-my-primary">Favourite Song</h3>
+        </div>                              
+        <div class="modal-body">
+            <!-- Project Details Go Here -->
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/i-lytXA5Jwo" allowfullscreen=""></iframe>
+            </div>
+            <div class="col-xs-12" style="height: 30px;"></div>
+            <p><strong>Sometimes i study udemy programming course or watch american TV-series</strong></p>                             
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>                            
+        </div>
+      </div>
+      
+    </div>
+    </div>
+
+
+    <!-- jQuery -->
+    <%= javascript_include_tag 'jquery' %>
+
+    <!-- Bootstrap Core JavaScript -->
+   <%= javascript_include_tag 'bootstrap' %>
+
+    <!-- Plugin JavaScript -->
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js' %>
+
+
+    <!-- Contact Form JavaScript -->
+    <%= javascript_include_tag 'jqBootstrapValidation' %>
+    <%= javascript_include_tag 'contact_me' %>
+
+    <!-- Theme JavaScript -->
+    <%= javascript_include_tag 'agency' %>
+
+
