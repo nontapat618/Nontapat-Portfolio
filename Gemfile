@@ -50,9 +50,8 @@ group :development do
 end
 
 group :production do
-  
   gem 'pg'
   gem 'rails_12factor'
-  
+  ruby "2.3"
 end
 
