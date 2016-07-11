@@ -776,3 +776,7 @@ textarea.transparent-textarea{
 #nsc,#acm,#java,#spring,#hibernate,#ruby,#websphere,#svn,#git,#dbvis,#javascript,#jquery{
   visibility: hidden;
 }
+
+html, body {
+  overflow-x: hidden;
+}
