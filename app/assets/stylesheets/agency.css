@@ -229,7 +229,7 @@ header {
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.80), 
       rgba(0, 0, 0, 0.80)
-    ),url('meandfriend.jpg');
+    ),url('https://c2.staticflickr.com/8/7574/27831872593_7123e87a80_z.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -557,9 +557,9 @@ aside.clients img {
   margin: 50px auto;
 }
 section#contact {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(12, 12, 12, 1)), color-stop(100%, rgba(52, 52, 52, 0.65))), url('pairprogramming.jpg') no-repeat;
-  background: -webkit-linear-gradient(top, rgba(12, 12, 12, 1) 0%, rgba(52, 52, 52, 0.65) 100%), url('pairprogramming.jpg') no-repeat;
-  background: linear-gradient(to bottom, rgba(12, 12, 12, 1) 0%,rgba(52, 52, 52, 0.65) 100%), url('pairprogramming.jpg') no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(12, 12, 12, 1)), color-stop(100%, rgba(52, 52, 52, 0.65))), url('https://c6.staticflickr.com/9/8646/28448400805_1a8d0bf06c_m.jpg') no-repeat;
+  background: -webkit-linear-gradient(top, rgba(12, 12, 12, 1) 0%, rgba(52, 52, 52, 0.65) 100%), url('https://c6.staticflickr.com/9/8646/28448400805_1a8d0bf06c_m.jpg') no-repeat;
+  background: linear-gradient(to bottom, rgba(12, 12, 12, 1) 0%,rgba(52, 52, 52, 0.65) 100%), url('https://c6.staticflickr.com/9/8646/28448400805_1a8d0bf06c_m.jpg') no-repeat;
   background-size: cover;  
   background-position: center;
   background-repeat: no-repeat;
