@@ -7,6 +7,10 @@ class WelcomeController < ApplicationController
             print 'sadasdsdsancxkxsad'
         end
     end
+    
+    def message
+        @messages = Message.all
+    end    
    
    
     private
