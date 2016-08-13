@@ -1,0 +1,30 @@
+
+<div style="background:#000;">
+<h1 align="center">Log in </h1>
+
+
+        <%= form_for(:session ,  :html => {class: "form-horizontal", role: "form"},url: login_path) do |f| %>
+        <div class = 'form-group'>
+            <div class = 'control-label col-md-2'>
+                <%= f.label:User,class: "message-text" %>
+            </div>
+            <div class = 'col-md-8'>
+                <%=  f.text_field:userName,class: "form-control transparent-input",placeholder: "User Name" %>
+            </div>
+        </div>
+        <div class = 'form-group'>
+            <div class = 'control-label col-md-2'>
+                <%= f.label:Password,class: "message-text" %>
+            </div>
+            <div class = 'col-md-8'>
+                <%=  f.password_field:password,class: "form-control transparent-input",placeholder: "Password" %>
+            </div>
+        </div>
+        <div class = 'col-md-12' style="height: 50px;"></div>        
+        <div class = 'form-group'>
+            <div class = 'col-md-offset-5 col-md-2 col-sm-offset-5 col-sm-2 col-xs-offset-4 col-xs-3'>
+                <%= f.submit "Log in" ,class: 'btn btn-danger btn-lg' %>
+            </div>
+        </div>
+        <% end %>
+</div>
