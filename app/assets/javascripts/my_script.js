@@ -39,7 +39,7 @@
     
     		var topOfWindow = $(window).scrollTop();
     			if (imagePos < topOfWindow+600) {
-    				$(this).addClass("expandOpen");
+    				setTimeout(function(){ $('#java').addClass("expandOpen"); }, 300);
     			}
     		});
     		
@@ -48,7 +48,7 @@
     
     		var topOfWindow = $(window).scrollTop();
     			if (imagePos < topOfWindow+600) {
-    				$(this).addClass("expandOpen");
+    				setTimeout(function(){ $('#spring').addClass("expandOpen"); }, 600);
     			}
     		});
     		
@@ -57,7 +57,7 @@
     
     		var topOfWindow = $(window).scrollTop();
     			if (imagePos < topOfWindow+600) {
-    				$(this).addClass("expandOpen");
+    				setTimeout(function(){ $('#hibernate').addClass("expandOpen"); }, 900);
     			}
     		});
     		
@@ -66,7 +66,7 @@
     
     		var topOfWindow = $(window).scrollTop();
     			if (imagePos < topOfWindow+600) {
-    				$(this).addClass("expandOpen");
+    				setTimeout(function(){ $('#ruby').addClass("expandOpen"); }, 1200);
     			}
     		});  
 
